@@ -22,7 +22,7 @@ const Contacts = () => {
         <div className="row justify-content-center">
           <div className="col-md-4">
             <div
-              className={`contact-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`contact-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3>
@@ -41,7 +41,7 @@ const Contacts = () => {
               </div>
             </div>
             <div
-              className={`contact-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`contact-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3>
@@ -62,7 +62,7 @@ const Contacts = () => {
           </div>
           <div className="col-md-4">
             <div
-              className={`contact-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`contact-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3>
@@ -81,7 +81,7 @@ const Contacts = () => {
               </div>
             </div>
             <div
-              className={`contact-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`contact-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3>

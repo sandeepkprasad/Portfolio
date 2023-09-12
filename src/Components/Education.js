@@ -24,7 +24,7 @@ const Education = () => {
         <div className="row justify-content-center">
           <div className="col-md-4">
             <div
-              className={`education-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`education-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3 className="fs-2">
@@ -48,7 +48,7 @@ const Education = () => {
           </div>
           <div className="col-md-4">
             <div
-              className={`education-item d-flex mb-4 p-4 shadow rounded bg-${mode}`}
+              className={`education-item d-flex mb-4 p-4 shadow-sm border rounded bg-${mode}`}
             >
               <div className="icon text-warning">
                 <h3 className="fs-2">
@@ -59,13 +59,13 @@ const Education = () => {
                 <h3
                   className={`fs-5 text-${mode === "light" ? "dark" : "light"}`}
                 >
-                  MERN Stack Web Developer
+                  MERN Stack Intern
                 </h3>
                 <p className={`text-${mode === "light" ? "muted" : "light"}`}>
                   RCS Technology, Bangalore
                 </p>
                 <p className={`text-${mode === "light" ? "muted" : "light"}`}>
-                  2022
+                  Jun, 2022 - Sept, 2022
                 </p>
               </div>
             </div>

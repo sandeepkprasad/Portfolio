@@ -8,6 +8,7 @@ import Works from "./Components/Works";
 import Footer from "./Components/Footer";
 import Contacts from "./Components/Contacts";
 import Education from "./Components/Education";
+import BottomNav from "./Components/BottomNav";
 
 const App = () => {
   return (
@@ -15,12 +16,13 @@ const App = () => {
       <div>
         <Navbar />
         <Home />
+        <About />
         <Skills />
         <Works />
         <Education />
         <Contacts />
-        <About />
         <Footer />
+        <BottomNav />
       </div>
     </PortfolioState>
   );

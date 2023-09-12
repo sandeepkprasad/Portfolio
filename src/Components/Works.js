@@ -1,11 +1,37 @@
-import React from "react";
+import React, { useContext } from "react";
+import { MdLaunch } from "react-icons/md";
 import portfolioContext from "../Context/portfolioContext";
-import { useContext } from "react";
-import mern from "../Assests/mern.png";
-import news from "../Assests/newsLight.png";
-import advice from "../Assests/advice.png";
-import portfolio from "../Assests/portfolio.png";
-import portfolioOld from "../Assests/portfolio-old.png";
+import dashboard from "../Assests/dashboard.png";
+import store from "../Assests/store.png";
+import bloggy from "../Assests/bloggy.png";
+import fooddy from "../Assests/fooddy.png";
+
+const projects = [
+  {
+    id: "bloggy",
+    image: bloggy,
+    title: "Bloggy",
+    link: "https://bloggywebapp.netlify.app",
+  },
+  {
+    id: "fooddy",
+    image: fooddy,
+    title: "Fooddy",
+    link: "https://fooddyapp.netlify.app",
+  },
+  {
+    id: "store",
+    image: store,
+    title: "Store",
+    link: "https://timely-strudel-110b26.netlify.app",
+  },
+  {
+    id: "dashboard",
+    image: dashboard,
+    title: "Admin Dashboard",
+    link: "https://shimmering-sunshine-7bb92e.netlify.app",
+  },
+];
 
 const Works = () => {
   const { mode } = useContext(portfolioContext);
@@ -23,127 +49,40 @@ const Works = () => {
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div className={`works-item shadow h-100 p-4 rounded bg-${mode} text-center`}>
-              <img
-                className="w-100 image-thumbnail"
-                src={mern}
-                alt="work_img"
-              />
-              <h3
-                className={`text-capitalize fs-5 my-2 text-${
-                  mode === "light" ? "dark" : "light"
-                }`}
-              >
-                Contacts (MERN Stack)
-              </h3>
-              <p className="mb-4">
-                <a className="text-warning text-decoration-none" href="#home">
-                  Live Demo
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div className={`works-item shadow h-100 p-4 rounded bg-${mode} text-center`}>
-              <img
-                className="w-100 image-thumbnail"
-                src={news}
-                alt="work_img"
-              />
-              <h3
-                className={`text-capitalize fs-5 my-2 text-${
-                  mode === "light" ? "dark" : "light"
-                }`}
-              >
-                NEWS Application
-              </h3>
-              <p className="mb-4">
-                <a
-                  className="text-warning text-decoration-none"
-                  href="https://taupe-dango-51e537.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div className={`works-item shadow h-100 p-4 rounded bg-${mode} text-center`}>
-              <img
-                className="w-100 image-thumbnail"
-                src={advice}
-                alt="work_img"
-              />
-              <h3
-                className={`text-capitalize fs-5 my-2 text-${
-                  mode === "light" ? "dark" : "light"
-                }`}
-              >
-                Advice Application
-              </h3>
-              <p className="mb-4">
-                <a
-                  className="text-warning text-decoration-none"
-                  href="https://dynamic-semifreddo-c93c54.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div className={`works-item shadow h-100 p-4 rounded bg-${mode} text-center`}>
-              <img
-                className="w-100 image-thumbnail"
-                src={portfolio}
-                alt="work_img"
-              />
-              <h3
-                className={`text-capitalize fs-5 my-2 text-${
-                  mode === "light" ? "dark" : "light"
-                }`}
-              >
-                Portfolio Website
-              </h3>
-              <p className="mb-4">
-                <a className="text-warning text-decoration-none" href="#home">
-                  Live Demo
-                </a>
-              </p>
-            </div>
-          </div>
-          <div className="col-md-6 col-lg-4 mb-4">
-            <div className={`works-item shadow h-100 p-4 rounded bg-${mode} text-center`}>
-              <img
-                className="w-100 image-thumbnail"
-                src={portfolioOld}
-                alt="work_img"
-              />
-              <h3
-                className={`text-capitalize fs-5 my-2 text-${
-                  mode === "light" ? "dark" : "light"
-                }`}
-              >
-                Portfolio Website (Old)
-              </h3>
-              <p className="mb-4">
-                <a
-                  className="text-warning text-decoration-none"
-                  href="https://resonant-sunshine-3fd109.netlify.app/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Live Demo
-                </a>
-              </p>
-            </div>
-          </div>
+        <div className="row justify-content-center">
+          {projects &&
+            projects.map((project) => {
+              return (
+                <div className="col-6 col-md-4 mb-4" key={project.id}>
+                  <div
+                    className={`works-item shadow-sm border h-100 p-4 rounded bg-${mode} text-center`}
+                  >
+                    <img
+                      className="w-100 image-thumbnail rounded border"
+                      src={project.image}
+                      alt="work_img"
+                    />
+                    <h3
+                      className={`text-capitalize fs-5 my-2 text-${
+                        mode === "light" ? "dark" : "light"
+                      }`}
+                    >
+                      {project.title}
+                    </h3>
+                    <p className="mt-3 mb-1">
+                      <a
+                        className="text-warning text-decoration-none"
+                        href={project.link}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <MdLaunch className="fs-4" />
+                      </a>
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
         </div>
       </div>
     </section>
