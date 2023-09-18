@@ -5,8 +5,15 @@ import dashboard from "../Assests/dashboard.png";
 import store from "../Assests/store.png";
 import bloggy from "../Assests/bloggy.png";
 import fooddy from "../Assests/fooddy.png";
+import taskbox from "../Assests/taskbox.png";
 
 const projects = [
+  {
+    id: "taskbox",
+    image: taskbox,
+    title: "TaskBox",
+    link: "https://taskboxapp.netlify.app",
+  },
   {
     id: "bloggy",
     image: bloggy,
